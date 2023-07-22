@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <script src="./src/main.ts" type="module" defer></script>
+    <link rel="stylesheet" href="./src/style.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <section id="container">
+      <!-- Top Image -->
+      <img src="/images/logo.svg" alt="logo" class="logo" />
+
+      <!-- Flex container -->
+
+      <section id="info_container" class="flex_container">
+        <!-- first flex child -->
+
+        <article class="flex_items" id="info_container">
+          <!-- Bill -->
+          <form>
+            <label for="Bill" class="label">Bill</label>
+            <input
+              type="number"
+              placeholder="0"
+              id="Bill"
+              dir="rtl"
+              class="input"
+            />
+
+            <!-- Tip -->
+
+            <label class="label" for="custom">Select Tip %</label>
+            <div class="Tip_container">
+              <button class="tip" value="5">5%</button>
+              <button class="tip" value="10">10%</button>
+              <button class="tip" value="15">15%</button>
+              <button class="tip" value="25">25%</button>
+              <button class="tip" value="50">50%</button>
+              <input type="number" id="custom" dir="rtl" placeholder="Custom" />
+            </div>
+
+            <!-- Number of Person -->
+            <div class="flex_person_label">
+              <label for="person" class="label">Number of People</label>
+              <span id="error">Can't be zero</span>
+            </div>
+            <input
+              type="number"
+              placeholder="0"
+              id="person"
+              dir="rtl"
+              class="input"
+            />
+            <button type="submit" id="submit"></button>
+          </form>
+        </article>
+
+        <!-- secound Flex Child -->
+
+        <article class="flex_items" id="result_container">
+          <!-- Tip amount -->
+          <div class="amount_container">
+            <div class="text">
+              <p class="heading">Tip Amount</p>
+              <p class="txt">/ person</p>
+            </div>
+            <h1 id="Tip_person" class="per-person">$0.00</h1>
+          </div>
+
+          <!-- Total amount -->
+
+          <div class="amount_container">
+            <div class="text">
+              <p class="heading">Total</p>
+              <p class="txt">/ person</p>
+            </div>
+            <h1 id="Total_person" class="per-person">$0.00</h1>
+          </div>
+
+          <!-- Reset -->
+
+          <button id="Reset">RESET</button>
+        </article>
+      </section>
+    </section>
+  </body>
+</html>
